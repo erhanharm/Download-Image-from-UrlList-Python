@@ -17,7 +17,6 @@ with open("file.txt", "r") as ins:  #read file for imagelinks
         try:
             print line
             page = requests.get(line.replace("\r","").replace("\n","")) # line ending chars throws 404 issue 
-            #page = requests.get('https://img-morhipo.mncdn.com/productimages/i/MH114006038318/[img][5][1].jpg')
             print page.status_code
             if page.status_code != 200:
     			print 'url not found'
